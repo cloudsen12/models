@@ -21,24 +21,32 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-# 1. R Libraries
-library(rgee)
-library(raster)
 
+# 1. R Libraries ----------------------------------------------------------
+library(rgee)
+library(stars)
+library(dplyr)
 source("utils.R")
 
-# 1. Init Earth Engine
+
+# 2. Init Earth Engine ----------------------------------------------------
 ee_Initialize()
 
-# 2. Load metadata
-local_cloudsen2_metadata <- read.csv("data/metadata_s2.csv")
 
-points <- list.files("/media/csaybar/Elements SE/cloudSEN12_f/high/")
-local_cloudsen2_metadata_l2 <- local_cloudsen2_metadata[local_cloudsen2_metadata$name %in% points,]
-for (index in 1:2000) {
-  print(index)
-  results_qa60 <- QA60_creator(local_cloudsen2_metadata_l2[index, ], label = "high")
-  allp_q60 <- find_point(results_qa60[[1]]$point)
-  export_results(results_qa60 = results_qa60, allp_q60 = allp_q60)
-}
+# 3. Load metadata --------------------------------------------------------
+local_cloudsen2_metadata <- read.csv("data/cloudsen12_metadata.csv")
+local_cloudsen2_sf <- st_sf(
+  local_cloudsen2_metadata, 
+  geometry = st_as_sfc(local_cloudsen2_metadata$proj_centroid), 
+  crs = 4326
+)
 
+# 4. Run q60 --------------------------------------------------------------
+index <- 2
+cloudsen12_ip <- local_cloudsen2_sf[index, ]
+qamask <- QA60_creator(
+  centroid = cloudsen12_ip$geometry, 
+  s2id = cloudsen12_ip$s2_id_gee
+)
+
+plot(qamask)
