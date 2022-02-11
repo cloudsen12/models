@@ -42,11 +42,10 @@ In order to cover EO benchmarking requirements, we join to each IP the results o
 
 This project gratefully acknowledges:
 
-**Computing resources**
-
 <img src=https://user-images.githubusercontent.com/16768318/153642319-9bb91ef6-a400-47ff-a080-9b4406390153.svg width=20%>
 
-**rgee and rgeeExtra software**
+**for computing resources**
 
 <img src=https://user-images.githubusercontent.com/16768318/153673173-e9069a03-daa7-4893-93ef-246248d48351.png width=20%>
 
+**for rgee and rgeeExtra software**
