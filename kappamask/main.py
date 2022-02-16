@@ -36,7 +36,7 @@ def kappamask_prediction(file, model, version="L1C"):
         model.load_weights(filelocal="weights/l1c_ft_b7__007-0.10.hdf5")
         data = create_np(file, version=version)
     elif version == "L2A":
-        model.load_weights(filelocal="weights/l2a__030-0.07.hdf5")
+        model.load_weights(filelocal="weights/l2a_ft_lr__003-0.06.hdf5")
         data = create_np(file, version=version)
     return model.predict(data)
 
