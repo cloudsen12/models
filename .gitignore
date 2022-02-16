@@ -2,3 +2,7 @@
 .Rhistory
 .RData
 .Ruserdata
+
+kappamask/weights/l1c_ft_b7__007-0.10.hdf5
+
+kappamask/weights/l2a_ft_lr__003-0.06.hdf5
