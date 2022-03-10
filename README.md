@@ -28,7 +28,7 @@ In order to cover EO benchmarking requirements, we join to each IP the results o
   
   - **qa60**: Cloud mask embeds in SEN2 Level-1C products. The cloud mask are obtained from the “COPERNICUS/S2” GEE dataset.
 
-
+  - **kappaMask:** UNet with two distinct settings: all Sentinel-2 L1C bands and all Sentinel-2 L2A bands except the Red Edge 3 band. It was trained in an extension of the Sentinel-2 Cloud Mask Catalogue.
 ## Instructions
 
 1) Go to the model folder.
