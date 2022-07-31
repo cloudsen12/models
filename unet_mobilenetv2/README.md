@@ -1,4 +1,4 @@
-# Instructions to train
+### Instructions to train
 
 In this folder, you will find the code used to generate KappaMask cloud mask results in all the cloudSEN12 image patches.
 
@@ -6,9 +6,6 @@ In this folder, you will find the code used to generate KappaMask cloud mask res
 2) Download cloudSEN12 high-quality dataset.
 3) Download cloudSEN12 metadata (`cloudsen12_metadata.csv`, see cloudsen12 Python package).
 
-
-# Instructions for prediction.
-
-Use maskay or cloudsen12 python packages.
+Use maskay or cloudsen12 python packages for making predictions.
 
 
