@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <img src=https://user-images.githubusercontent.com/54723897/113879941-4e1af480-97bb-11eb-83f3-e0ec8772b7c4.gif width=500px>
+  <img src=https://user-images.githubusercontent.com/54723897/113879941-4e1af480-97bb-11eb-83f3-e0ec8772b7c4.gif width=400px>
   <br>    
 </h1>
 
@@ -16,7 +16,7 @@
 
 ## Introduction
 
-In order to cover EO benchmarking requirements, we join to each IP the results of six of the most popular CD algorithms:
+In order to cover EO benchmarking requirements, we join to each IP the results of eight of the most popular CD algorithms:
   
   - **Fmask4**: Function of Mask. We use the MATLAB implementation code via Linux Docker containers. This resource is available in https://github.com/GERSL/Fmask.	
   
@@ -29,6 +29,8 @@ In order to cover EO benchmarking requirements, we join to each IP the results o
   - **qa60**: Cloud mask embeds in SEN2 Level-1C products. The cloud mask are obtained from the “COPERNICUS/S2” GEE dataset.
 
   - **kappaMask:** UNet with two distinct settings: all Sentinel-2 L1C bands and all Sentinel-2 L2A bands except the Red Edge 3 band. It was trained in an extension of the Sentinel-2 Cloud Mask Catalogue.
+  
+  
 ## Instructions
 
 1) Go to the model folder.
@@ -45,7 +47,3 @@ This project gratefully acknowledges:
 <img src=https://user-images.githubusercontent.com/16768318/153642319-9bb91ef6-a400-47ff-a080-9b4406390153.svg width=20%>
 
 **for computing resources**
-
-<img src=https://user-images.githubusercontent.com/16768318/153673173-e9069a03-daa7-4893-93ef-246248d48351.png width=20%>
-
-**for rgee and rgeeExtra software**
